@@ -2,7 +2,19 @@
 
 ## Descrição
 
-Azure Function HTTP Trigger que gera e calcula relatórios de agendamentos, respondendo requisições de agregação de dados.
+Azure Function HTTP Trigger que gera e calcula relatórios de agendamentos, respondendo requisições de agregação de dados. Faz parte de uma aplicação distribuída que combina **microservices**, **BFF**, **microfrontend** e **serverless**.
+
+## Arquitetura
+
+- `GenerateScheduleReport/index.js` — lógica principal do HTTP Trigger
+- `GenerateScheduleReport/function.json` — binding HTTP e rota da função
+- `host.json` — configuração do runtime do Azure Functions
+- `package.json` — dependências e scripts
+
+Padrões aplicados:
+- **Serverless** com Azure Functions
+- **API Gateway + BFF + Microservice + Database Service + Serverless**
+- **Event-Driven Architecture** para relatórios e métricas em fluxo distribuído
 
 ## Responsabilidades
 
@@ -233,6 +245,3 @@ jobs:
 - Fellipe
 - Nelson
 - Allan
-
-**Mantido por**: BarberPoint Team  
-**Última atualização**: 27 de abril de 2026
